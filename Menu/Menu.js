@@ -2,7 +2,9 @@
 const toggleMenu = () => {
   // Toggle the "menu--open" class on your menu refence.
    menu.classList.toggle('menu--open');
+  //  TweenMax.to(menu, 1, );
 }
+
 
 // Start Here: Create a reference to the ".menu" class
 const menu = document.querySelector('.menu');

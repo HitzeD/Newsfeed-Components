@@ -23,6 +23,26 @@ class Article {
   expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
     this.domElement.classList.toggle('article-open');
+    // TweenMax.to(this.domElement, 2, {power1});
+  }
+}
+
+class ArtBuilder {
+  constructor(article, head) {
+    this.article = article;
+    this.head = head;
+    this.newArt = document.createElement('div');
+    this.newHead = document.createElement('h2');
+    this.newTime = new Date();
+    this.newPara = document.createElement('p');
+    this.newBtn = document.createElement('span');
+  }
+
+  create(){
+    this.newArt.appendChild(this.newHead, this.newTime, this.para, this.newBtn);
+    this.newhead.textContent = this.head;
+    this.newArt.setAttribute('class','article');
+    this.newBtn.setAttribute('class', 'expandButton');
   }
 }
 
@@ -43,3 +63,6 @@ let articles = document.querySelectorAll('.article');
 articles.forEach(function(article){
   new Article(article);
 })
+
+
+new ArtBuilder(article, 'who did it?');
